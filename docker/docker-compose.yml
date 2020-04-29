@@ -1,0 +1,29 @@
+version: "2"
+services:
+  db:
+    container_name: StegosaurusMysql
+    image: mysql
+    ports: 
+      - 3306:3306
+    environment:
+      TZ: Asia/Taipei
+      MYSQL_DATABASE: Stegosaurus
+      MYSQL_USER: xin
+      MYSQL_PASSWORD: "@Stegosaurus"
+      MYSQL_ROOT_PASSWORD: "@StegosaurusRoot"
+    restart: always
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    links: 
+      - db
+    ports:
+      - 8000:80
+    volumes:
+      - /sessions
+    restart: always
+  redis:
+    container_name: StegosaurusRedis
+    image: redis:4.0.9
+    ports:
+      - 6379:6379
+    command: redis-server --requirepass dockeredis
