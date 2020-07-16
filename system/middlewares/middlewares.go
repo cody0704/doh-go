@@ -7,7 +7,7 @@ import (
 
 // Loggin Middleware
 func Loggin(r *gin.Engine) {
-	r.Use(httpsecure())
+	// r.Use(httpsecure())
 }
 
 // Secure is Secure Middleware.

@@ -7,9 +7,10 @@ import (
 
 func main() {
 	config.Init()
-	config := config.GetConfig()
+	// config := config.GetConfig()
 	r := route.NewRouter()
-	go r.Run(":80")
+	// go r.Run(":80")
+	r.Run(":80")
 
-	r.RunTLS(":"+config.GetString("server.port"), "./app/certs/157.245.57.91.crt", "./app/certs/157.245.57.91.key")
+	// r.RunTLS(":"+config.GetString("server.port"), "./app/certs/157.245.57.91.crt", "./app/certs/157.245.57.91.key")
 }
