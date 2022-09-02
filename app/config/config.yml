@@ -1,0 +1,9 @@
+version: '0.1'
+server:
+  title: DNS over HTTPs
+  port: "443"
+  base_url: ""
+  index: ""
+log:
+  path: "doh.log"
+  permissions: "0644"
