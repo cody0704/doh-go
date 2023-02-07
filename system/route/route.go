@@ -1,8 +1,8 @@
 package route
 
 import (
-	"gin-stegosaurus/system/controllers"
-	"gin-stegosaurus/system/middlewares"
+	"github.com/cody0704/doh-go/system/controllers"
+	"github.com/cody0704/doh-go/system/middlewares"
 
 	"github.com/gin-gonic/gin"
 )
@@ -13,8 +13,11 @@ func NewRouter() *gin.Engine {
 	gin.DisableConsoleColor()
 
 	// this is output gin log to write log file
-	// f, _ := os.Create("./log/gin-stegosaurus.log")
-	// gin.DefaultWriter = io.MultiWriter(f)
+	//	config := config.GetConfig()
+	//	filename := config.GetString("log.path")
+	//	permissions := config.GetUint32("log.permissions")
+	//	f, _ := os.OpenFile("./log/"+filename, os.O_APPEND|os.O_CREATE|os.O_WRONLY, os.FileMode(permissions))
+	//	gin.DefaultWriter = io.MultiWriter(f)
 
 	router := gin.New()
 	router.Use(gin.Logger())

@@ -5,5 +5,5 @@ server:
   base_url: ""
   index: ""
 log:
-  path: "acom-dot.log"
-  permissions: "0644"
+  path: "acom-doh.log"
+  permissions: 0644

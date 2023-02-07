@@ -1,7 +1,7 @@
 package core
 
 import (
-	"gin-stegosaurus/system/config"
+	"github.com/cody0704/doh-go/system/config"
 )
 
 type H map[string]interface{}
